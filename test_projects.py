@@ -34,7 +34,7 @@ class TestYougileProjects:
         assert response.json().get("id") == project_id
 
     def test_get_project_negative(self):
-        """Негативный тест на получение несуществующего проекта"""
+        #Негативный тест на получение несуществующего проекта
         project_id = 9999  
         response = ProjectApi.get_project(project_id)
         assert response.status_code == 404
